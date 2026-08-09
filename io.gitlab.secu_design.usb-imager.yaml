@@ -40,6 +40,8 @@ modules:
         -t /app/share/metainfo/
       - install -Dm644 LICENSE -t /app/share/licenses/io.gitlab.secu_design.usb-imager/
     sources:
+      # Flathub pins both the tag and its commit so a build stays
+      # reproducible even if the tag is ever force-moved on GitLab.
       - type: git
         url: https://gitlab.com/secu-design/usb-imager.git
         tag: '4.1.0'
