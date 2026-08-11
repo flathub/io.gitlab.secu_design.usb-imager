@@ -28,6 +28,7 @@ finish-args:
 
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
+  - /app/cleanup-unused.sh
 
 modules:
   - python3-deps.yaml
@@ -39,10 +40,12 @@ modules:
       - install -Dm644 distribution/flatpak/io.gitlab.secu_design.usb-imager.metainfo.xml
         -t /app/share/metainfo/
       - install -Dm644 LICENSE -t /app/share/licenses/io.gitlab.secu_design.usb-imager/
+      # Runs during the cleanup phase and deletes itself at the end.
+      - install -Dm755 distribution/flatpak/cleanup-unused.sh /app/cleanup-unused.sh
     sources:
       # Flathub pins both the tag and its commit so a build stays
       # reproducible even if the tag is ever force-moved on GitLab.
       - type: git
         url: https://gitlab.com/secu-design/usb-imager.git
-        tag: '4.1.0'
-        commit: e2af0aa4c993920190c3be4fd9fd08be9d14dc5f
+        tag: '4.1.1'
+        commit: e57b9d128ee4241991e8e90355c3466b75eeb20b
