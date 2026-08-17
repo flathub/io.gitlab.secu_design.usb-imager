@@ -1,0 +1,11 @@
+# General
+.directory
+.cache/
+
+# IDE
+.idea/
+.vscode/
+
+# Flatpak build output
+build*/
+.flatpak-builder/

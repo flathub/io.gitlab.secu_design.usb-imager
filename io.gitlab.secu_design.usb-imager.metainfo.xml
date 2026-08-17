@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.gitlab.secu_design.usb-imager</id>
+
+  <name>USB Imager</name>
+  <summary>Write many USB drives at once</summary>
+  <summary xml:lang="de">USB-Laufwerke parallel beschreiben</summary>
+  <summary xml:lang="fr">Écrire plusieurs clés USB à la fois</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <developer id="io.gitlab.secu_design">
+    <name>Secu-Design®</name>
+  </developer>
+
+  <launchable type="desktop-id">io.gitlab.secu_design.usb-imager.desktop</launchable>
+
+  <description>
+    <p>
+      USB-Imager writes a disk image to several USB drives at the same time.
+      Connected drives are detected automatically.
+    </p>
+    <p>
+      Drive access is handled by the udisks2 service of the system. Entering a
+      password is only required for writing when the policy of the distribution
+      in use demands it.
+    </p>
+    <p>
+      Before writing, the image can be checked against a checksum. After
+      writing, it is possible to verify the content of the drives.
+    </p>
+
+    <p>Features:</p>
+
+    <p xml:lang="de">
+      USB-Imager schreibt ein Datenträgerabbild gleichzeitig auf mehrere USB-Laufwerke.
+      Angeschlossene Laufwerke werden automatisch erkannt.
+    </p>
+    <p xml:lang="de">
+      Der Zugriff auf die Laufwerke erfolgt über den udisks2-Dienst des Systems.
+      Eine Passworteingabe ist zum Schreiben nur erforderlich, wenn dies von der
+      Richtlinie der verwendeten Distribution verlangt wird.
+    </p>
+    <p xml:lang="de">
+      Vor dem Schreiben lässt sich das Abbild anhand einer Prüfsumme überprüfen.
+      Nach dem Schreiben kann der Inhalt der Laufwerke verifiziert werden.
+    </p>
+
+    <p xml:lang="de">Funktionen:</p>
+
+    <p xml:lang="fr">
+      USB-Imager écrit une image disque sur plusieurs clés USB en même temps.
+      Les clés connectées sont détectées automatiquement.
+    </p>
+    <p xml:lang="fr">
+      L'accès aux clés passe par le service udisks2 du système. La saisie d'un
+      mot de passe n'est nécessaire pour l'écriture que si la politique de la
+      distribution utilisée l'exige.
+    </p>
+    <p xml:lang="fr">
+      Avant l'écriture, l'image peut être contrôlée à l'aide d'une somme de
+      contrôle. Après l'écriture, il est possible de vérifier le contenu des
+      clés.
+    </p>
+
+    <p xml:lang="fr">Fonctionnalités :</p>
+
+    <ul>
+      <li>Writing an image to multiple USB drives at once</li>
+      <li>Automatic drive detection</li>
+      <li>Fast writing through the sendfile() system call</li>
+      <li>Adjustable write buffer between 1 MiB and 4 MiB</li>
+      <li>Optional validation of the written image</li>
+      <li>Optional checksum verification of the selected image</li>
+      <li>Automatic unmounting of the drives</li>
+      <li>Warning for ISO files that do not look bootable</li>
+      <li>Statistics about writing time and overall speed</li>
+      <li>Selectable color scheme (Auto, Light, Dark)</li>
+
+      <li xml:lang="de">Gleichzeitiges Schreiben eines Abbilds auf mehrere USB-Laufwerke</li>
+      <li xml:lang="de">Automatische Laufwerkerkennung</li>
+      <li xml:lang="de">Schnelles Schreiben durch den Systemaufruf sendfile()</li>
+      <li xml:lang="de">Wählbarer Schreibpuffer von 1 MiB bis 4 MiB</li>
+      <li xml:lang="de">Optionale Überprüfung des geschriebenen Abbilds</li>
+      <li xml:lang="de">Optionale Prüfsummenkontrolle des ausgewählten Abbilds</li>
+      <li xml:lang="de">Automatisches Aushängen der Laufwerke</li>
+      <li xml:lang="de">Warnung bei ISO-Dateien, die nicht bootfähig erscheinen</li>
+      <li xml:lang="de">Statistiken über Schreibdauer und Gesamtgeschwindigkeit</li>
+      <li xml:lang="de">Wählbares Farbschema (Auto, Light, Dark)</li>
+
+      <li xml:lang="fr">Écriture d'une image sur plusieurs clés USB à la fois</li>
+      <li xml:lang="fr">Détection automatique des clés</li>
+      <li xml:lang="fr">Écriture rapide grâce à l'appel système sendfile()</li>
+      <li xml:lang="fr">Tampon d'écriture réglable entre 1 Mio et 4 Mio</li>
+      <li xml:lang="fr">Validation facultative de l'image écrite</li>
+      <li xml:lang="fr">Vérification facultative de la somme de contrôle de l'image sélectionnée</li>
+      <li xml:lang="fr">Démontage automatique des clés</li>
+      <li xml:lang="fr">Avertissement pour les fichiers ISO qui ne semblent pas amorçables</li>
+      <li xml:lang="fr">Statistiques sur la durée d'écriture et la vitesse globale</li>
+      <li xml:lang="fr">Thème au choix (Auto, Light, Dark)</li>
+    </ul>
+  </description>
+
+  <categories>
+    <category>Utility</category>
+    <category>FileTools</category>
+  </categories>
+
+  <keywords>
+    <keyword>usb</keyword>
+    <keyword>image</keyword>
+    <keyword>iso</keyword>
+    <keyword>img</keyword>
+    <keyword>writer</keyword>
+    <keyword>dd</keyword>
+    <keyword>flash</keyword>
+    <keyword>boot</keyword>
+    <keyword>multiple</keyword>
+    <keyword>batch</keyword>
+  </keywords>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#a8b4ea</color>
+    <color type="primary" scheme_preference="dark">#2f3a70</color>
+  </branding>
+
+  <url type="homepage">https://gitlab.com/secu-design/usb-imager</url>
+  <url type="bugtracker">https://gitlab.com/secu-design/usb-imager/-/issues</url>
+  <url type="vcs-browser">https://gitlab.com/secu-design/usb-imager</url>
+  <url type="donation">https://buymeacoffee.com/secudesign</url>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_main.png</image>
+      <caption>Writing and validation finished</caption>
+      <caption xml:lang="de">Abgeschlossenes Schreiben und Prüfen</caption>
+      <caption xml:lang="fr">Écriture et validation terminées</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_dark.png</image>
+      <caption>Window with the dark color scheme</caption>
+      <caption xml:lang="de">Fenster mit dunklem Farbschema</caption>
+      <caption xml:lang="fr">Fenêtre avec le thème sombre</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_start.png</image>
+      <caption>Drives ready to be written</caption>
+      <caption xml:lang="de">Laufwerke bereit zum Beschreiben</caption>
+      <caption xml:lang="fr">Clés prêtes à être écrites</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_hash.png</image>
+      <caption>Checking the checksum of the selected image</caption>
+      <caption xml:lang="de">Kontrolle der Prüfsumme des gewählten Abbilds</caption>
+      <caption xml:lang="fr">Vérification de la somme de contrôle de l'image sélectionnée</caption>
+    </screenshot>
+  </screenshots>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <content_rating type="oars-1.1"/>
+
+  <releases>
+    <release version="4.1.1" date="2026-08-11">
+      <description>
+        <ul>
+          <li>
+            The Flatpak package now needs considerably less storage space. The
+            installation size was reduced from about 278 MiB to 19 MiB, without
+            limiting what the program can do.
+          </li>
+          <li>
+            The Open dialog now uses the file dialog of the desktop. It
+            therefore looks different from before, but still gives access to
+            all folders.
+          </li>
+          <li>
+            The Flathub page of USB-Imager is now fully translated into
+            English, German and French. Other languages are no longer offered.
+          </li>
+          <li>
+            In the application menu the program is now shown as "USB Imager"
+            without the hyphen.
+          </li>
+          <li>
+            The Flathub page now shows four screenshots instead of just one,
+            among them the dark color scheme. Its own colors and a shorter
+            description were also added.
+          </li>
+          <li>
+            A crash in the Flatpak package was fixed. Previously, closing a
+            window such as "About" with the button in its title bar could
+            crash the whole application.
+          </li>
+
+          <li xml:lang="de">
+            Das Flatpak-Paket benötigt jetzt deutlich weniger Speicherplatz.
+            Die Installationsgröße wurde von etwa 278 MiB auf 19 MiB reduziert,
+            ohne den Funktionsumfang einzuschränken.
+          </li>
+          <li xml:lang="de">
+            Der Öffnen-Dialog verwendet jetzt den Dateidialog der Arbeitsumgebung.
+            Dadurch sieht er anders aus als bisher, bietet aber weiterhin Zugriff
+            auf alle Ordner.
+          </li>
+          <li xml:lang="de">
+            Die Flathub-Seite von USB-Imager ist jetzt vollständig auf Englisch,
+            Deutsch und Französisch übersetzt. Andere Sprachen werden nicht mehr
+            angeboten.
+          </li>
+          <li xml:lang="de">
+            Im Anwendungsmenü wird das Programm jetzt als "USB Imager" ohne
+            Bindestrich angezeigt.
+          </li>
+          <li xml:lang="de">
+            Die Flathub-Seite zeigt jetzt vier Screenshots statt nur eines,
+            darunter auch das dunkle Farbschema. Außerdem wurden eigene Farben
+            und eine kürzere Beschreibung hinzugefügt.
+          </li>
+          <li xml:lang="de">
+            Ein Absturz im Flatpak-Paket wurde behoben. Beim Schließen eines
+            Fensters wie "Über" über die Schaltfläche in der Titelleiste konnte
+            zuvor die gesamte Anwendung abstürzen.
+          </li>
+
+          <li xml:lang="fr">
+            Le paquet Flatpak nécessite désormais nettement moins d'espace de
+            stockage. La taille de l'installation est passée d'environ 278 Mio
+            à 19 Mio, sans réduire les fonctions du programme.
+          </li>
+          <li xml:lang="fr">
+            La boîte de dialogue d'ouverture utilise désormais le sélecteur de
+            fichiers de l'environnement de bureau. Son apparence diffère donc
+            de la précédente, mais elle donne toujours accès à tous les
+            dossiers.
+          </li>
+          <li xml:lang="fr">
+            La page Flathub d'USB-Imager est désormais entièrement traduite en
+            anglais, en allemand et en français. Les autres langues ne sont
+            plus proposées.
+          </li>
+          <li xml:lang="fr">
+            Dans le menu des applications, le programme est désormais affiché
+            comme « USB Imager » sans trait d'union.
+          </li>
+          <li xml:lang="fr">
+            La page Flathub affiche maintenant quatre captures d'écran au lieu
+            d'une seule, dont le thème sombre. Des couleurs propres et une
+            description plus courte ont également été ajoutées.
+          </li>
+          <li xml:lang="fr">
+            Un plantage du paquet Flatpak a été corrigé. Auparavant, la
+            fermeture d'une fenêtre telle que « À propos » à l'aide du bouton
+            de sa barre de titre pouvait faire planter toute l'application.
+          </li>
+        </ul>
+      </description>
+    </release>
+    <release version="4.1.0" date="2026-07-31">
+      <description>
+        <p>
+          USB-Imager is now available as a Flatpak package and starts from the
+          menu of the desktop, with an entry in the configured language. The
+          window now looks the same everywhere, and the light and dark color
+          schemes work on every desktop.
+        </p>
+        <p xml:lang="de">
+          USB-Imager gibt es jetzt als Flatpak-Paket und startet aus dem Menü
+          der Arbeitsumgebung, mit einem Eintrag in der eingestellten
+          Sprache. Das Fenster sieht jetzt überall gleich aus, und das helle
+          und das dunkle Farbschema funktionieren in jeder Arbeitsumgebung.
+        </p>
+        <p xml:lang="fr">
+          USB-Imager est désormais disponible sous forme de paquet Flatpak et
+          se lance depuis le menu de l'environnement de bureau, avec une
+          entrée dans la langue configurée. La fenêtre a maintenant la même
+          apparence partout, et les thèmes clair et sombre fonctionnent dans
+          tous les environnements de bureau.
+        </p>
+      </description>
+    </release>
+  </releases>
+</component>
