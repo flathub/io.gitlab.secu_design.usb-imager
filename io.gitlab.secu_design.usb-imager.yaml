@@ -22,7 +22,6 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
-  - --device=dri
   # Device access runs through udisks2, which passes the file descriptor over D-Bus.
   - --system-talk-name=org.freedesktop.UDisks2
 
