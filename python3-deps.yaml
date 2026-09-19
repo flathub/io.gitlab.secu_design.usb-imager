@@ -1,4 +1,10 @@
-# Generated with flatpak-pip-generator --yaml jeepney flit_core --output python3-deps
+# Generated with FLATPAK_PIP_GENERATOR_ALLOW_RESTRICTED_MODULES=1
+# flatpak-pip-generator --yaml --runtime org.kde.Sdk//6.11
+# --prefer-wheels PySide6-Essentials,shiboken6 jeepney flit_core
+# PySide6-Essentials --output python3-deps
+#
+# The environment variable is required because the generator refuses PySide6
+# by default and points to the base app instead.
 name: python3-deps
 buildsystem: simple
 build-commands: []
@@ -19,5 +25,31 @@ modules:
         --prefix=${FLATPAK_DEST} "flit_core" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f2/65/b6ba90634c984a4fcc02c7e3afe523fef500c4980fec67cc27536ee50acf/flit_core-3.12.0-py3-none-any.whl
-        sha256: e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c
+        url: https://files.pythonhosted.org/packages/38/2a/8ea4bd54734f0fcbb507c28cb6b79d72f528e40498178a01cb35fc5d686f/flit_core-4.1.0-py3-none-any.whl
+        sha256: 17398cdd2c38b24047a5a9c93089ec5c0bf12ec3d1469bbf69c27ed7965299db
+  - name: python3-PySide6-Essentials
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "PySide6-Essentials" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/0e/1a/84a84bbc75835ee88abdcb66eb875b8e1a21834af9b833bc1893f2c1bfaf/pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl
+        sha256: aaf9f25f0f324874085fa5b26a610318db8a8e243cf85bb3e5400595191c7778
+        only-arches:
+          - x86_64
+      - type: file
+        url: https://files.pythonhosted.org/packages/60/4c/d92b08a2151d095b9a3725fa0e71b215ec686d40bbd5d8b702d21a9b5eaa/pyside6_essentials-6.11.2-cp310-abi3-manylinux_2_39_aarch64.whl
+        sha256: d3ec6e1885c46e57f16364f38ea8040ffc5dc0b18341058f608fede3ba930567
+        only-arches:
+          - aarch64
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/9a/f41bea4316d0c1bec4800842dcb4bd8fd3e29d6a79c496bc32e1aec42583/shiboken6-6.11.2-cp310-abi3-manylinux_2_34_x86_64.whl
+        sha256: 7a7a0a72a9ed26c9bf77d42246b1c736486befb8f31aa2fb29957ea4cdd1c1c2
+        only-arches:
+          - x86_64
+      - type: file
+        url: https://files.pythonhosted.org/packages/56/05/79ed0697515d4fc7435459e4ed4c4a3b5621a55b7c91d0f3f2cc3d617aa0/shiboken6-6.11.2-cp310-abi3-manylinux_2_39_aarch64.whl
+        sha256: 4bbbd6fa4d7cff5ec5e12bc4c10e1d845fa30c89457ecb13cc64f7bddb77f6f9
+        only-arches:
+          - aarch64

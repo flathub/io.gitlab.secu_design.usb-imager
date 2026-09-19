@@ -2,21 +2,12 @@ id: io.gitlab.secu_design.usb-imager
 runtime: org.kde.Platform
 runtime-version: '6.11'
 sdk: org.kde.Sdk
-base: io.qt.PySide.BaseApp
-base-version: '6.11'
 command: usb-imager
 
 # Flathub expects the desktop file and the icons to carry the app ID as their
 # name. Both keys belong at the top level, a module ignores them.
 rename-desktop-file: usb-imager.desktop
 rename-icon: usb-imager
-
-# The cleanup script of the base app reads both. The application uses neither
-# QtWebEngine nor numpy, and dropping them saves about 370 MB.
-build-options:
-  env:
-    BASEAPP_DISABLE_NUMPY: '1'
-    BASEAPP_REMOVE_WEBENGINE: '1'
 
 finish-args:
   - --share=ipc
@@ -26,7 +17,6 @@ finish-args:
   - --system-talk-name=org.freedesktop.UDisks2
 
 cleanup-commands:
-  - /app/cleanup-BaseApp.sh
   - /app/cleanup-unused.sh
 
 modules:
@@ -45,8 +35,8 @@ modules:
       # reproducible even if the tag is ever force-moved on GitLab.
       - type: git
         url: https://gitlab.com/secu-design/usb-imager.git
-        tag: '4.1.1'
-        commit: e57b9d128ee4241991e8e90355c3466b75eeb20b
+        tag: '4.1.2'
+        commit: 67c132ec0d03c1cfd49cfb2f83b3e3da7b234cf6
       # Packaging-only files, not tied to a specific upstream commit, so
       # they live in this repo instead of being fetched from GitLab.
       - type: file
