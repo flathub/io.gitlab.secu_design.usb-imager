@@ -132,25 +132,25 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_main.png</image>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.2/screenshots/screenshot_main.png</image>
       <caption>Writing and validation finished</caption>
       <caption xml:lang="de">Abgeschlossenes Schreiben und Prüfen</caption>
       <caption xml:lang="fr">Écriture et validation terminées</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_dark.png</image>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.2/screenshots/screenshot_dark.png</image>
       <caption>Window with the dark color scheme</caption>
       <caption xml:lang="de">Fenster mit dunklem Farbschema</caption>
       <caption xml:lang="fr">Fenêtre avec le thème sombre</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_start.png</image>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.2/screenshots/screenshot_start.png</image>
       <caption>Drives ready to be written</caption>
       <caption xml:lang="de">Laufwerke bereit zum Beschreiben</caption>
       <caption xml:lang="fr">Clés prêtes à être écrites</caption>
     </screenshot>
     <screenshot>
-      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.1/screenshots/screenshot_hash.png</image>
+      <image>https://gitlab.com/secu-design/usb-imager/-/raw/4.1.2/screenshots/screenshot_hash.png</image>
       <caption>Checking the checksum of the selected image</caption>
       <caption xml:lang="de">Kontrolle der Prüfsumme des gewählten Abbilds</caption>
       <caption xml:lang="fr">Vérification de la somme de contrôle de l'image sélectionnée</caption>
@@ -165,6 +165,49 @@
   <content_rating type="oars-1.1"/>
 
   <releases>
+    <release version="4.1.2" date="2026-09-19">
+      <description>
+        <ul>
+          <li>
+            The Flatpak package grew from about 19 MiB to about 87 MiB. This
+            increase is a consequence of the fix below, but it ensures that
+            the application continues to work reliably.
+          </li>
+          <li>
+            Changed the dependencies of the Flatpak package, because the
+            program could sometimes fail to start after a Flatpak update.
+            The <code>PySide6-Essentials</code> wheel from PyPI is now used
+            instead of <code>io.qt.PySide.BaseApp</code>.
+          </li>
+
+          <li xml:lang="de">
+            Das Flatpak-Paket ist von etwa 19 MiB auf etwa 87 MiB gewachsen.
+            Diese Zunahme ist eine Folge der unten genannten Fehlerbehebung,
+            sichert aber den zuverlässigen Betrieb der Anwendung.
+          </li>
+          <li xml:lang="de">
+            Die Abhängigkeiten des Flatpak-Pakets wurden geändert, weil das
+            Programm nach einer Flatpak-Aktualisierung manchmal nicht mehr
+            starten konnte. Statt <code>io.qt.PySide.BaseApp</code> wird
+            jetzt das <code>PySide6-Essentials</code>-Wheel von PyPI genutzt.
+          </li>
+
+          <li xml:lang="fr">
+            Le paquet Flatpak est passé d'environ 19 Mio à environ 87 Mio.
+            Cette augmentation découle de la correction ci-dessous, mais elle
+            garantit que l'application continue de fonctionner de manière
+            fiable.
+          </li>
+          <li xml:lang="fr">
+            Les dépendances du paquet Flatpak ont été modifiées, car le
+            programme ne démarrait parfois plus après une mise à jour
+            Flatpak. Le wheel <code>PySide6-Essentials</code> de PyPI est
+            désormais utilisé à la place de
+            <code>io.qt.PySide.BaseApp</code>.
+          </li>
+        </ul>
+      </description>
+    </release>
     <release version="4.1.1" date="2026-08-11">
       <description>
         <ul>
